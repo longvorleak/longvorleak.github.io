@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./nespresso-3.svg">
+    <link rel="stylesheet" href="nespresso.css">
+    <title>Enter Account Information | Nespresso | Nespresso France</title>
+</head>
+
+    <body>
+        <div id="logo-container">
+        <a href="https://www.nespresso.com/fr/en/" target="_blank"></a>
+        <img src="https://www.nespresso.com/ecom/medias/sys_master/public/10698362454046/logo-white.svg" alt="nespresso logo" title="" id="logo">
+        </div>
+        
+        <header>
+        
+            <div id="header-text">
+                <h1 id="link">Already a Nespresso customer ?</h1>
+                <p> 
+                    Select "Yes" for the question "Have you ever bought Nespresso coffee ?"
+                    <br />
+                    Indicate your client number & postal code
+                </p>
+                <p>
+                    Then you can continuously benefit from the rewards program.
+                </p>
+            </div>
+
+        </header>
+
+        <section>
+            <div class="info">
+                <p>
+                    <b>Have you placed an online order before?</b>
+                <br/>
+                    Then you already have an online account and you can log-in 
+                    <a href="https://www.nespresso.com/fr/en/secure/login">here</a>.
+                <br/>
+                    If not, you can activate your online account below and place your first online order.
+                </p>
+
+            <form>
+
+                <table>
+                    <tr>
+                        <td id="cel1">
+                            <label for="first-name" class="required">First name *</label>
+                        </td>
+                        <td>
+                            <input 
+                            type="text" 
+                            name="first-name"
+                            id="first-name"
+                            minlength="1"
+                            maxlength="20"
+                            required>
+                            <span class="error">All fields with an * are mandatory.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="last-name" class="required">Last name *</label>
+                        </td>
+                        <td>
+                            <input 
+                            type="text" 
+                            id="last-name"
+                            name="last-name"
+                            minlength="1"
+                            required>
+                            <span class="error">All fields with an * are mandatory.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email" class="required">Email address *</label>
+                        </td>
+                        <td>
+                            <input type="text" name="email" id="email">
+                            <span class="error">All fields with an * are mandatory.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pwd" class="required">Password</label></td>
+                        <td><input type="password" id="pwd" />
+                            <div class="pwd-info">
+                                <div class="arrow-left"></div>
+                            <p>Password must:</p>
+                            <ul>
+                                <li>Have at least 8 characters</li>
+                                <li>Contain a number</li>
+                                <li>Contain a capital letter</li>
+                            </ul>
+                            </div>
+                        <span class="error">All fields with an * are mandatory.</span>
+                        <span class="error"
+                              >You have to include capital letters, numbers and do not use
+                              your previous passwords.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Password strength:</td>
+                    </tr>
+                </table>
+
+            </div>
+
+                <h2>Nespresso Club Membership</h2>
+
+            <div class="info">
+                <p>
+                    <input type="radio" name="membership" value="no" id="no">
+                    <label for="no" class="radio">No, I do not have a <span>Nespresso</span> Club Membership number.</label>
+                </p>
+                <p>
+                    <input type="radio" name="membership" value="yes" id="yes">
+                    <label for="yes" class="radio" id="yes">Yes, I do have a <span>Nespresso</span> Club Membership Number.</label>
+                </p>
+
+                <table>
+                    <tr>
+                        <td id="cel2">Membership number*</td>
+                        <td>
+                            <input type="text" class="long">
+                            <p>
+                                <a href="">Where can you find your membership number?</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>My postal code*</td>
+                        <td><input type="text" class="long"></td>
+                    </tr>
+                </table>
+
+            </div>
+            
+                <div class="info-bottom">
+                    <p>
+                        By clicking on “Continue”, you acknowledge having read <i>Nespresso</i> <a href="https://www.nespresso.com/fr/en/legal">Privacy Notice</a>.
+                    </p>
+                    <input type="submit" name="submit" value="Continue " id="submit">
+                </div>
+            </form>
+
+        </section>
+
+        <section class="bottom">
+            <div>
+                <img src="./fr.png">
+            <select name="language" value="language">
+                <option value="English">English</option>
+                <option value="French">Français</option>
+            </select>
+            </div>
+            <div class="links">
+                <p>contact| store locator | Events | careers | press room | entreprise durable</p>
+                <p>legal | code of antitrust | technical communcation | cancelation | cookies | glossary | sitemap</p>
+            </div>
+        </section>
+
+        <footer>
+        <p>Follow <span>Nespresso</span> on</p>
+        <p><a href="#link">Top of the page</a>
+        <div class="arrow">^</div></p>
+        
+        <p>Nespresso S.A. 2017</p>
+        </footer>
+        
+        <script src="errorSubmit.js"></script>
+    </body>
+
+</html>

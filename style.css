@@ -1,0 +1,13 @@
+html{
+    background-color: crimson;
+    text-align: center;
+}
+
+div {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    background-color: whitesmoke;
+}
+
