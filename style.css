@@ -10,5 +10,14 @@ div {
     border-radius: 5px;
     padding: 20px 40px;
     background-color: whitesmoke;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
+a {
+    text-decoration: none;
+}
+
+:visited {
+    color: crimson;
+}
