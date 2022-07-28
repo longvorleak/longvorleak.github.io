@@ -16,8 +16,6 @@ div {
 
 a {
     text-decoration: none;
-}
-
-:visited {
     color: crimson;
+    font-weight: bold;
 }
