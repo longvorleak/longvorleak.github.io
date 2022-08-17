@@ -3,6 +3,9 @@ html{
     text-align: center;
 }
 
+h1 {
+    color: whitesmoke;
+}
 div {
     width: 300px;
     display: flex;
