@@ -11,26 +11,6 @@ button.setAttribute ('onClick', 'window.location.reload()');
 
 console.log(squares);
 
-
-// for (let i = 0 ; i < squares.length ; i++) {
-
-//     squares[i].addEventListener('click', function(e) {
-
-//         if ( !e.target.textContent){
-
-//             e.target.textContent = check;
-
-//             if ( check == "x"){
-//             check = "o";
-                
-//             } else {
-//                 check = "x";
-//             }
-//         }
-//     });
-// }
-
-
 for (let i = 0 ; i < squares.length ; i++) {
 
     squares[i].addEventListener('click', function(e) {

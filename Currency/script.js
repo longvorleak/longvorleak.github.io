@@ -1,44 +1,10 @@
-// function getCurrency(){
-//     let xhr = new XMLHttpRequest();
-//     xhr.open('GET', 'https://api.coinlore.net/api/tickers/');
-//     xhr.addEventListener('readystatechange', () => {
-//         if ( xhr.readyState === 4 ){
-
-//             let response = JSON.parse(xhr.responseText);
-//             console.log(response);
-
-//             for ( let coin of response.data ) {
-
-//                 let row = document.createElement('tr'); 
-
-//                 row.innerHTML = `
-//                 <td>${coin.rank}</td>
-//                 <td>${coin.name} ${coin.symbol}</td>
-//                 <td>${coin.price_usd}</td>
-//                 <td>${coin.percent_change_1h}</td>
-//                 <td>${coin.percent_change_24h}</td>
-//                 <td>${coin.percent_change_7d}</td>
-//                 <td>${coin.market_cap_usd}</td>
-//                 <td>${coin.volume24}</td>
-//                 <td>${coin.csupply} ${coin.symbol}</td>
-//                 `
-//                 let table = document.querySelector('table');
-//                 table.appendChild(row);
-
-//             }
-
-//         } else if ( xhr.readyState === XMLHttpRequest.DONE && xhr.status !== 200 ){
-            
-//             alert(`There is an error!
-//             Code: ${xhr.status}
-//             Text: ${xhr.statusText}`);
-//         }
-
-//     })
-//     xhr.send(null);
-// };
-
-// getCurrency();
+function addCommas(num) {
+    if (typeof num !== "number") parseInt(num);
+    let floor = Math.floor(num);
+    let numParts = floor.toString().split(".");
+    numParts[0] = numParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return numParts.join(".");
+  }
 
 function getCurrency(){
     let xhr = new XMLHttpRequest();
@@ -48,6 +14,9 @@ function getCurrency(){
 
             let rawData = JSON.parse(xhr.responseText);
             console.log(rawData);
+
+            let table = document.querySelector('tbody');
+            table.innerHTML="";
 
             for (let coin of rawData.data) {
                 let row = document.createElement('tr');
@@ -110,8 +79,8 @@ function getCurrency(){
                 csupply.textContent = addCommas(coin.csupply) + " " + coin.symbol;
                 row.appendChild(csupply);
                 
-                let table = document.querySelector('table');
                 table.appendChild(row);
+
               }
         } else if ( xhr.readyState === XMLHttpRequest.DONE && xhr.status !== 200 ){
             
@@ -123,14 +92,8 @@ function getCurrency(){
     })
     xhr.send(null);
 };
-
-function addCommas(num) {
-    if (typeof num !== "number") parseInt(num);
-    let floor = Math.floor(num);
-    let numParts = floor.toString().split(".");
-    numParts[0] = numParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return numParts.join(".");
-  }
-
-
 getCurrency();
+
+setInterval(function(){
+    getCurrency()
+}, 5000);
