@@ -5,12 +5,14 @@ html{
 
 h1 {
     color: whitesmoke;
+    margin: 50px 0;
 }
 div {
     width: 300px;
     display: flex;
     justify-content: center;
     border-radius: 5px;
+    box-shadow: 2px 2px 2px lightcoral;
     padding: 20px 40px;
     background-color: whitesmoke;
     margin: auto;
@@ -21,4 +23,10 @@ a {
     text-decoration: none;
     color: crimson;
     font-weight: bold;
+}
+
+footer {
+    font-size: smaller;
+    margin: 50px 0;
+    color: white;
 }
