@@ -5,37 +5,153 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Vorleak's page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,700&family=Architects+Daughter&family=Dancing+Script&family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="public/images/favicon.png" type="image/x-icon"> 
+
+<script src="https://kit.fontawesome.com/ed779ab57c.js" crossorigin="anonymous"></script>
+<title>Vorleak's Portfolio</title>
 </head>
 <body>
-    <h1>Hello there, my name is Vorleak! 👋🏼</h1>
 
-    <div>
-        <a href="https://longvorleak.github.io/tesla/tesla.html" target="_blank">Tesla project</a>
+<header>
+    <nav>
+        <div id="hamburger">
+            <input type="checkbox" />
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+    
+            <ul id="hamburger-menu" class="ul-nav">
+                <li><a href="#section-hero"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#section-about"><i class="fa-solid fa-user"></i> About Me</a></li>
+                <li><a href="#section-project"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
+                <li><a href="#section-contact"><i class="fa-regular fa-address-card"></i> Contact</a></li>
+            </ul>
+        </div>
+    
+        <div id="no-hamburger">
+            <ul class="ul-nav">
+                <li><a href="#section-hero"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#section-about"><i class="fa-solid fa-user"></i> About Me</a></li>
+                <li><a href="#section-project"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
+                <li><a href="#section-contact"><i class="fa-regular fa-address-card"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+
+<section id="section-hero">
+    <div class="hero-right">
+        <img src="./public/images/portfolio-web.jpg" alt="profile pic" id="pro-pic">
     </div>
-
-    <div>
-        <a href="./SPPS_Project/index.html" target="_blank">SPPS project</a>
+    <div class="bubble left hero-bubble"><h1>Hello world! 
+    </br> I'm <span class="bold">Vorleak</span>.</h1></div>
+</section>
+<section id="section-about">
+    <h2>About Me</h2>
+    <div class="about-containter">
+        <div class="about-text">
+            <h3>Hello there!👋🏼 
+            </br>
+                My name is <span class="name">Vorleak</span> and I'm a Belgian</h3>
+            <p>web developer based in Seoul, South Korea.</p>
+        </div>
+        <div class="manga-pic">
+            <img src="./public/images/Profile-manga.png" alt="profile pic" id="pro-manga-pic">
+        </div>
     </div>
+</section>
+<section id="section-project">
+    <h2>Projects</h2>
 
-    <div>
-        <a href="./GuessingNumber/index.html",target="_blank">More or Less game</a>
+    <div class="project">
+        Dear Diary
     </div>
+    <p>A web based journaling application</p>
 
-    <div>
-        <a href="./Tic-Tac-Toe/index.html" target="_blank"> Tic-Tac-Toe game</a>
+    <div class="project">
+        Speak Easy
     </div>
+    <p>A language exchange webpage</p>
 
-    <div>
-        <a href="./Currency/index.html" target="_blank">Crypto project</a>
-    </div>
+    <a href="./Weather/index.html" target="_blank">
+        <div class="project">
+                Weather project
+        </div>
+    </a>
+    <p>Search engine displaying a five day weather forecast using the OpenWeather API</p>
 
-    <div>
-        <a href="./Weather/index.html" target="_blank">Weather project</a>
-    </div>
+    <a href="" target="_blank">
+        <div class="project">
+                Food Blog
+        </div>
+    </a>
+    <p>A food blog website with a comment section for each blog and pagination </p>
 
-    <footer>
-        ©2022 Vorleak. All rights reserved.
-    </footer>
+    <a href="./Currency/index.html" target="_blank">
+        <div class="project">
+                Crypto project
+        </div>
+    </a>
+    <p>Crypto chart showing the top 100 coins using the CoinLore Crypto data API</p>
+
+    <a href="./Tic-Tac-Toe/index.html" target="_blank"> 
+        <div class="project">
+            Tic-Tac-Toe game
+        </div>
+    </a>
+    <p>A simple Tic-Tac-Toe Game using JavaScript.</p>
+    
+    <a href="./GuessingNumber/index.html",target="_blank">
+        <div class="project">
+            More or Less game
+        </div>
+    </a>
+    <p>A simple number guessing game with full JavaScript vanilla, HTML and CSS</p>
+    
+    <a href="./SPPS_Project/index.html" target="_blank">
+        <div class="project">
+            SPPS project
+        </div>
+    </a>
+    <p>Building a homepage using HTML and CSS only</p>
+
+    <a href="https://longvorleak.github.io/tesla/tesla.html" target="_blank">
+        <div class="project">
+            Tesla homepage
+        </div>
+    </a>
+    <p>Cloning the Tesla homepage using HTML and CSS</p>
+    
+    <!-- <i class="fa-brands fa-html5 icon"></i>
+    <i class="fa-brands fa-css3 icon"></i>
+
+    <i class="fa-brands fa-js icon"></i>
+    <i class="fa-brands fa-php icon"></i>
+    <i class="fa-solid fa-database icon"></i>
+    <i class="fa-brands fa-git icon"></i>
+    <i class="fa-brands fa-square-git"></i>
+    <i class="fa-brands fa-figma icon"></i>
+    <i class="fa-brands fa-trello icon"></i>
+    <i class="fa-brands fa-jira"></i>
+    <i class="fa-brands fa-confluence"></i>
+    Learning:
+    <i class="fa-brands fa-react icon"></i> -->
+</section>
+<section id="section-contact">
+    <h2>Contact</h2>
+    <p>Interested in collaborating?</p>
+    <i class="fa-solid fa-envelope"></i> Send me an email at 
+    <a href = "mailto: longvorleak@gmail.com" class="email-link"> longvorleak@gmail.com</a>.
+    <!-- <div class="socials">
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-square-github"></i>
+    </div> -->
+</section>
+<footer>©2022 Vorleak. All rights reserved.</footer>
 </body>
 </html>
