@@ -24,6 +24,7 @@ html {
     color: var(--text-color);
     overflow-x: hidden;
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 * {
@@ -37,7 +38,7 @@ html, body {
 }
 
 h2 {
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: 700;
     border: solid 3px var(--text-color);
     width: fit-content;
@@ -90,11 +91,10 @@ button:hover {
 /* === NAVIGATION === */
 .ul-nav {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: space-around;
-    padding: 20px 0;
+    padding: 20px 0px;
+    box-sizing: border-box;
 }
 
 nav {
@@ -112,18 +112,21 @@ nav {
     width: fit-content;
     padding: 10px 15px;
     color: var(--text-color);
+    box-sizing: border-box;
 }
 
 /* === DEFAULT SECTION === */
-#section-about, #section-skills, #section-contact {
+#section-about, #section-skills {
     height: 100vh;
     padding: 80px 100px;
     box-sizing: border-box;
+    scroll-snap-align: start;
 }
 
 #section-project {
     padding: 50px 100px 0 100px;
     box-sizing: border-box;
+    scroll-snap-align: start;
 }
 
 /* === HERO SECTION === */
@@ -131,6 +134,7 @@ nav {
 #section-hero {
     width: 100vw;
     box-sizing: border-box;
+    scroll-snap-align: start;
 } 
 
 #pro-pic {
@@ -202,11 +206,14 @@ nav {
 .name {
     color: var(--light-color);
     font-family: 'Dancing Script', cursive;
+    font-size: 1.4em;
 } 
 
 #pro-manga-pic {
     border-radius: 50%;
-    width: 400px;
+    /* width: 380px; */
+    width: 90%;
+    height: auto;
 }
 /* === PROJECTS === */
 .project {
@@ -229,9 +236,9 @@ nav {
 
 .project-image {
     width: 50%;
-    border-radius: 20px;
-    padding: 10px;
-    border: 1px solid var(--text-color);
+    /* border-radius: 20px; */
+    /* padding: 10px; */
+    /* border: 1px solid var(--text-color); */
 }
 
 .left {
@@ -240,27 +247,45 @@ nav {
 
 .right {
     margin: 0 0 50px 20px;
+    text-align: right;
 }
 
-
-/* === CONTACT === */
-
-/* .skill-container {
-    border: solid 2px var(--text-color);
-    color: var(--text-color);
-    background-color: var(--dark-color);
-    width: 200px;
-    padding: 20px;
-    border-radius: 20px;
-} */
+.projec-img {
+    width: 100%;
+    border-radius: 15px;
+}
 
 /* === CONTACT === */
 
 #section-contact {
+    height: 90vh;
+    padding: 80px 100px;
+    box-sizing: border-box;
     background-color: var(--main-color);
+    color: var(--dark-color);
+    scroll-snap-align: start;
 }
-.email-link {
+
+#email-link {
     text-decoration: underline;
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+#email-link:active {
+    color: var(--dark-color);
+}
+
+#email-link:hover, .socials .icon:hover {
+    color: var(--text-color);
+}
+
+.socials .icon {
+    color: var(--dark-color);
+}
+
+#h2-contact {
+    border-color: var(--dark-color);
 }
 
 /* === FOOTER === */
@@ -270,11 +295,16 @@ footer {
     text-align: center;
     font-size: smaller;
     padding: 30px 0;
+    height: 10vh;
 }
 
 /* === HAMBURGER === */
 #hamburger {
 	display: none;
+}
+
+#ham-title {
+    font-size: 1.2em;
 }
 
 @media screen and (max-width: 780px) {
@@ -368,9 +398,9 @@ footer {
 		width: 100vw;
 		height: fit-content;
 		margin: -160px 0 0 0;
-		padding: 125px 50px 40px 50px;
+		padding: 150px 50px 40px 50px;
 		/* padding-top: 125px; */
-		right: -100px;
+		right: -50px;
 		background: var(--dark-color);
 		list-style-type: none;
 		-webkit-font-smoothing: antialiased;

@@ -4,10 +4,20 @@ html, body {
 }
 
 html {
-    width: 100%;
-    background-color: #F57C00;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #F57C00; */
     color: #757575;
     text-align: center;
+}
+
+body {
+    opacity: 0.9;
+    background-image: url(./background.jpg);
+}
+
+input:focus{ 
+    outline: none; 
 }
 
 footer {
@@ -23,7 +33,6 @@ h1 {
     text-align: center;
     margin: 20px;
     color: whitesmoke;
-    text-shadow: 2px 2px 2px orange;
 }
 
 input {
@@ -31,9 +40,9 @@ input {
     height: 30px;
     margin-bottom: 20px;
     border-radius: 50px;
-    border: 2px solid #BDBDBD;
+    border: 2px solid #FFE0B2;
     padding-left: 14px;
-    box-shadow: 1px 1px 1px orange;
+    box-shadow: 1px 1px 2px whitesmoke;
 }
 
 .today {
@@ -43,8 +52,7 @@ input {
     text-align: center;
     border-radius: 20px;
     background-color: #FFE0B2;
-    box-shadow: 1px 1px 1px orange;
-    text-shadow: 1px 1px whitesmoke;
+    box-shadow: 1px 1px 2px whitesmoke;
 }
 
 .not-today {
@@ -61,8 +69,8 @@ input {
     text-align: center;
     border-radius: 20px;
     background-color: #FFE0B2;
-    box-shadow: 1px 1px 1px orange;
-    text-shadow: 1px 1px whitesmoke;
+    box-shadow: 1px 1px 2px whitesmoke;
+    /* text-shadow: 1px 1px whitesmoke; */
 }
 
 .todaySub {
@@ -71,7 +79,7 @@ input {
     display: flex;
     justify-content: space-around;    
     text-align: center;
-    text-shadow: 1px 1px whitesmoke;
+
 }
 
 #day {

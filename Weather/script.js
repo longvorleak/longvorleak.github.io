@@ -55,7 +55,7 @@ function getWeather(city = "seoul") {
 
 
             let temp = document.createElement('div');
-            temp.textContent = data.list[0].main.temp + '°';
+            temp.textContent = data.list[0].main.temp + '°C';
             temp.style.fontSize = "1.5em";
             temp.style.fontWeight = "bold";
             temp.style.color = "#03A9F4";
@@ -75,7 +75,7 @@ function getWeather(city = "seoul") {
             pressure.textContent = 'Pressure: ' + data.list[0].main.pressure + ' hPa';
 
             let feels = document.createElement('div');
-            feels.textContent = 'Feels like: ' + data.list[0].main.feels_like + '°';
+            feels.textContent = 'Feels like: ' + data.list[0].main.feels_like + '°C';
 
             let wind = document.createElement('div');
             wind.textContent = 'Wind: ' + data.list[0].wind.deg + '%';
@@ -124,7 +124,7 @@ function getWeather(city = "seoul") {
                 day.style.textTransform = "uppercase";
 
                 let temp = document.createElement('div');
-                temp.textContent = data.list[i].main.temp + '°';
+                temp.textContent = data.list[i].main.temp + '°C';
                 temp.id = "temp";
                 temp.style.fontSize = "1.5em";
                 temp.style.fontWeight = "bold";

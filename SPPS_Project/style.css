@@ -11,6 +11,10 @@
     line-height: 1.8;
 }
 
+#hamburger {
+	display: none;
+}
+
 p, td {
     color: var(--text-color-dark);
 }
@@ -65,7 +69,7 @@ h3 {
 }
 
 h4 { 
-    margin: 50px 0 0 0;
+    margin: 40px 0 0 0;
     font-size: 1em;
     text-transform: uppercase;
 }
@@ -146,10 +150,6 @@ transform: translate(-50%, -50%);
 
 #nav:hover {
    color: var(--main-color);
-    background-color: var(--main-color);
-    border-radius: 5px;
-    height: 10px;
-    margin: 15px;
     }
 
 #nav:active {
@@ -314,14 +314,11 @@ transform: translate(-50%, -50%);
 /* nav */
 
 #school-logo {
-    width: 100px;
+    width: 90px;
     height: 100%;
-    padding: 10px 10px 10px 0px;
 }
 
 nav {
-    display: flex;
-    justify-content: space-around;
     width: 100%;
     background-color: white;
     color: var(--school-color);
@@ -329,9 +326,13 @@ nav {
     z-index: 10;
     scroll-snap-align: start;
 }
+#no-hamburger .ul-nav{
+    display: flex;
+    justify-content: space-around;
+}
 
 @media screen and (max-width: 600px){
-    video-container, iframe, nav {
+    video-container, iframe {
         display: visible;
     }
 }
@@ -609,33 +610,11 @@ h2 {
     }
 }
 
-
-@media screen and (max-width: 685px){
-
-    main {
-        width: auto;
-        margin: 750px 10px 10px 20px;
-    }
-
-    #school-logo {
-        display: none;
-    } 
-}
-
 @media screen and (max-width: 500px){
-
-    nav {
-        display: block;
-    }
 
     main {
         margin: 100px 10px 10px 20px;
     }
-
-    h4 {
-        margin: 0;
-    }
-
     h1{
         font-size: 1.5em;
     }
@@ -670,4 +649,129 @@ h2 {
     iframe {
         display: none;
     }
+}
+
+@media screen and (max-width: 685px) {
+
+    #school-logo, iframe {display: none;}
+
+    main {
+        width: auto;
+        margin: 0 10px 10px 20px;
+    }
+	/* Hamburger menu */
+	#no-hamburger {
+		display: none;
+	}
+
+	#hamburger {
+		display: block;
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		z-index: 10;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+    .ul-nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nav:hover {
+        color: var(--text-color-light);
+        }
+
+    nav h4 {
+        margin: 20px 0;
+    }
+
+	#hamburger a {
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	#hamburger input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -7px;
+		left: -5px;
+
+		cursor: pointer;
+
+		opacity: 0; /* hide this */
+		z-index: 20; /* and place it over the hamburger */
+
+		-webkit-touch-callout: none;
+	}
+
+	/* hamburger */
+	#hamburger span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: var(--school-color);
+		border-radius: 3px;
+		z-index: 20;
+		transform-origin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+			background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+	}
+
+	#hamburger span:first-child {
+		transform-origin: 0% 0%;
+	}
+
+	#hamburger span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+
+	/* Transforms hamburger span into a crossmark */
+	#hamburger input:checked ~ .hamburger-line {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: var(--school-color);
+	}
+
+	/* hide the middle one */
+	#hamburger input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+
+	/* the last one should go the other direction */
+	#hamburger input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(0, -1px);
+	}
+
+	/* Make this absolute positioned at the top left of the screen */
+	#hamburger-menu {
+		position: absolute;
+		width: 100vw;
+		height: fit-content;
+		margin: -100px 0 0 0;
+		padding: 150px auto 40px auto;
+		padding-top: 40px;
+		right: -50px;
+		background: var(--main-color);
+		list-style-type: none;
+		-webkit-font-smoothing: antialiased;
+		/* to stop flickering of text in safari */
+
+		transform-origin: 0% 0%;
+		transform: translate(100%, 0);
+
+		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+	}
+
+	/* Slide it in from the left */
+	#hamburger input:checked ~ ul {
+		transform: none;
+	}
 }
