@@ -240,6 +240,13 @@ nav {
     /* padding: 10px; */
     /* border: 1px solid var(--text-color); */
 }
+.project-image:hover {
+    /* width: 50%; */
+    scale: 1.2;
+    /* border-radius: 20px; */
+    /* padding: 10px; */
+    /* border: 1px solid var(--text-color); */
+}
 
 .left {
     margin: 0 20px 50px 0;
@@ -250,7 +257,7 @@ nav {
     text-align: right;
 }
 
-.projec-img {
+.project-img {
     width: 100%;
     border-radius: 15px;
 }
