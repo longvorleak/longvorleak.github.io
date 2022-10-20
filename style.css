@@ -235,17 +235,10 @@ nav {
 }
 
 .project-image {
-    width: 50%;
-    /* border-radius: 20px; */
-    /* padding: 10px; */
-    /* border: 1px solid var(--text-color); */
+    width: 40%;
 }
 .project-image:hover {
-    /* width: 50%; */
-    scale: 1.2;
-    /* border-radius: 20px; */
-    /* padding: 10px; */
-    /* border: 1px solid var(--text-color); */
+    scale: 1.35;
 }
 
 .left {
