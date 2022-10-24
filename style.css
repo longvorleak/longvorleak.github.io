@@ -27,14 +27,21 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-* {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -135,6 +142,7 @@ nav {
     width: 100vw;
     box-sizing: border-box;
     scroll-snap-align: start;
+    overflow-x: hidden;
 } 
 
 #pro-pic {
@@ -307,116 +315,6 @@ footer {
     font-size: 1.2em;
 }
 
-@media screen and (max-width: 780px) {
-	/* Hamburger menu */
-	#no-hamburger {
-		display: none;
-	}
-
-	#hamburger {
-		display: block;
-		position: absolute;
-		top: 50px;
-		right: 50px;
-		z-index: 10;
-		-webkit-user-select: none;
-		user-select: none;
-	}
-
-    .ul-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        text-align: center;
-    }
-
-	#hamburger a {
-		text-decoration: none;
-		transition: color 0.3s ease;
-	}
-
-	#hamburger input {
-		display: block;
-		width: 40px;
-		height: 32px;
-		position: absolute;
-		top: -7px;
-		left: -5px;
-
-		cursor: pointer;
-
-		opacity: 0; /* hide this */
-		z-index: 20; /* and place it over the hamburger */
-
-		-webkit-touch-callout: none;
-	}
-
-	/* hamburger */
-	#hamburger span {
-		display: block;
-		width: 33px;
-		height: 4px;
-		margin-bottom: 5px;
-		position: relative;
-		background: var(--dark-color);
-		border-radius: 3px;
-		z-index: 20;
-		transform-origin: 4px 0px;
-		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-			background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-	}
-
-	#hamburger span:first-child {
-		transform-origin: 0% 0%;
-	}
-
-	#hamburger span:nth-last-child(2) {
-		transform-origin: 0% 100%;
-	}
-
-	/* Transforms hamburger span into a crossmark */
-	#hamburger input:checked ~ .hamburger-line {
-		opacity: 1;
-		transform: rotate(45deg) translate(-2px, -1px);
-		background: var(--text-color);
-	}
-
-	/* hide the middle one */
-	#hamburger input:checked ~ span:nth-last-child(3) {
-		opacity: 0;
-		transform: rotate(0deg) scale(0.2, 0.2);
-	}
-
-	/* the last one should go the other direction */
-	#hamburger input:checked ~ span:nth-last-child(2) {
-		transform: rotate(-45deg) translate(0, -1px);
-	}
-
-	/* Make this absolute positioned at the top left of the screen */
-	#hamburger-menu {
-		position: absolute;
-		width: 100vw;
-		height: fit-content;
-		margin: -160px 0 0 0;
-		padding: 150px 50px 40px 50px;
-		/* padding-top: 125px; */
-		right: -50px;
-		background: var(--dark-color);
-		list-style-type: none;
-		-webkit-font-smoothing: antialiased;
-		/* to stop flickering of text in safari */
-
-		transform-origin: 0% 0%;
-		transform: translate(100%, 0);
-
-		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-	}
-
-	/* Slide it in from the left */
-	#hamburger input:checked ~ ul {
-		transform: none;
-	}
-}
 
 /* === MEDIA QUERIES === */
 
@@ -428,6 +326,10 @@ footer {
         color: black;
         font-family: 'Architects Daughter', cursive;
         font-size: 1.2m;
+    }
+
+    #section-about, #section-skills, #section-project, #section-contact {
+        padding: 20px 30px;
     }
     
 }
