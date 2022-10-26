@@ -100,7 +100,7 @@ button:hover {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    padding: 20px 0px;
+    padding: 5px 0px;
     box-sizing: border-box;
 }
 
@@ -205,6 +205,10 @@ nav {
 
 .about-text {
     width: 60%;
+}
+
+.about-p {
+    font-size: 1.3em;
 }
 
 .manga-pic {
@@ -320,12 +324,20 @@ footer {
 
 @media screen and (max-width: 780px) {
     .hero-bubble { 
-        top: 5%;
-        left: 35%;
+        top: 12%;
+        left: 40%;
         padding: 1% 5%;
         color: black;
         font-family: 'Architects Daughter', cursive;
-        font-size: 1.2m;
+        font-size: 1em;
+    }
+
+    .bubble::before {
+        content: '';
+        position: absolute;
+        bottom: -35px;
+        height: 35px;
+        width: 80px;
     }
 
     #section-about, #section-skills, #section-project, #section-contact {
