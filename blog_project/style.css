@@ -1,0 +1,209 @@
+:root {
+    --text-color: #edf2f4;
+    --dark-color: #2b2d42;
+    --medium-color:#8d99ae;
+    --light-color: #bdc6d1;
+    --main-color: #d90429;
+    --sub-color: #ef233c;
+    --border-radius: 25px;
+}
+
+html {
+    background-image: linear-gradient(45deg, hsla(350, 96%, 43%, 1) 0%, hsla(235, 21%, 21%, 1) 100%);
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: var(--text-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.2em;
+}
+
+h2{
+    text-transform: capitalize;
+    color: var(--main-color);
+}
+
+footer {
+    font-size: smaller;
+    margin: 20px 0px;
+}
+
+.articleBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.article {
+    max-width: 400px;
+    max-height: 700px;
+    margin: 20px auto;
+    border-radius: var(--border-radius);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    text-align: start;
+}
+
+.text {
+    padding: 0 15px;
+}
+
+.writerContainer {
+    padding-left: 15px;
+    padding-bottom: 15px;
+    display: flex;
+}
+
+p.author, p.created {
+    margin: 0px;
+}
+
+p.author, p.username {
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+.writer {
+    margin: auto 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-size: smaller;
+}
+
+.profile {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    border-radius: 50%;
+}
+
+.img{
+    max-width: 100%;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.input {
+    border-radius: var(--border-radius);
+    border: none;
+    padding: 7px 10px;
+    width: 200px;
+    height: 20px;
+    margin: 10px;
+}
+.topic {
+    padding: 3px 10px;
+    border-radius: var(--border-radius);
+    background-color: var(--dark-color);
+    width: fit-content;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+/* buttons */
+button {
+    margin-top: 20px;
+    padding: 10px 40px;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.submit {
+    padding: 8px 40px;
+    height: 35px;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-weight: bold;
+}
+
+button:hover, .submit:hover {
+    background-color: var(--medium-color);
+}
+
+a {
+    color: var(--main-color);
+}
+a:hover {
+    color: var(--medium-color);
+}
+
+a:active {
+    color: var(--dark-color);
+}
+
+/* viewComments */
+
+.commentBox {
+    max-width: 800px;
+    background-color:  var(--dark-color);
+    padding: 10px 30px;
+    margin: auto;
+    border-radius: var(--border-radius);
+}
+
+.comments {
+    height: auto;
+    margin: 10px 0px;
+    padding: 5px 15px;
+    border-radius: var(--border-radius);
+    background-color: var(--medium-color);
+    color: var(--text-color);
+}
+
+.topcomments {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+p.comment {
+    margin: 10px 0;
+    text-align: left;
+}
+
+p.username {
+    font-size: small;
+}
+
+p.commentDate {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-size: smaller;
+}
+
+/* pages */
+
+.pageBox {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-size: 1em;
+}
+
+.page {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
