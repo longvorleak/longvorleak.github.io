@@ -100,6 +100,22 @@ button:hover {
     background-color: var(--main-color);
 }
 
+#back-button {
+    margin: 50px 0 10px 30px;
+    padding: 20px 50px;
+    text-align: center;
+    width: fit-content;
+    font-weight: bold;
+}
+
+#project-button  {
+    padding: 20px 50px;
+    text-align: center;
+    width: fit-content;
+    font-weight: bold;
+}
+
+
 /* === NAVIGATION === */
 .ul-nav {
     list-style-type: none;
