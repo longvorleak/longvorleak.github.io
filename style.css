@@ -51,7 +51,12 @@ h2 {
     width: fit-content;
     padding: 10px 15px;
 }
-::selection {
+
+p{
+    line-height: 1.5;
+}
+::selec
+tion {
     background-color: var(--main-color);
 }
 
@@ -195,8 +200,9 @@ nav {
 
 /* === ABOUT SECTION === */
 .text-highlight {
-    font-size: 2em;
+    font-size: 1.9rem;
 }
+
 .about-containter {
     display: flex;
     margin: 0 auto;
@@ -329,19 +335,41 @@ footer {
         padding: 1% 5%;
         color: black;
         font-family: 'Architects Daughter', cursive;
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .bubble::before {
         content: '';
         position: absolute;
-        bottom: -35px;
-        height: 35px;
+        bottom: -25px;
+        height: 25px;
         width: 80px;
     }
 
     #section-about, #section-skills, #section-project, #section-contact {
         padding: 20px 30px;
+        height: fit-content;
+    }
+
+    /* #section-about {
+        display: inline;
+    } */
+
+    .about-containter {
+        display: block;
+        padding: 20px 30px;
     }
     
+    .about-p {
+        font-size: 1em;
+    }
+
+    .text-highlight {
+        font-size: 1.5em;
+    }
+
+    .about-text, .manga-pic {
+        width: 100%;
+        text-align: center;
+    }
 }
