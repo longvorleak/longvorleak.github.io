@@ -1,0 +1,50 @@
+html {
+    background-color: lightcoral;
+    color: whitesmoke;
+    text-align: center;
+}
+
+h1 {
+    margin: 50px 0px;
+}
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td {
+    border: 3px solid whitesmoke;
+    width: 150px;
+    height: 150px;
+    background-color: powderblue;
+    font-size: 6em;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.highlight {
+    background-color: powderblue;
+    color: lightcoral;
+}
+
+h2 {
+    font-size: 3em;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 30px whitesmoke, 0 0 40px lightcoral, 0 0 50px lightcoral, 0 0 60px lightcoral, 0 0 70px lightcoral;
+    }
+    
+    to {
+      text-shadow: 0 0 30px coral, 0 0 40px coral, 0 0 50px coral, 0 0 60px coral, 0 0 70px coral, 0 0 80px coral;
+    }
+  }
+
+  button {
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+  }
