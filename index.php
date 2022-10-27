@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,700&family=Architects+Daughter&family=Dancing+Script&family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="public/images/favicon.png" type="image/x-icon"> 
-
-<script src="https://kit.fontawesome.com/ed779ab57c.js" crossorigin="anonymous"></script>
-<title>Vorleak's Portfolio</title>
-</head>
-<body>
-
-<header>
-    <nav>
-        <div id="hamburger">
-            <input type="checkbox" />
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-    
-            <ul id="hamburger-menu" class="ul-nav">
-                <li id="ham-title">Vorleak's Portfolio</li>
-                <li><a href="#section-hero"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="#section-about"><i class="fa-solid fa-user"></i> About Me</a></li>
-                <li><a href="#section-project"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
-                <li><a href="#section-contact"><i class="fa-regular fa-address-card"></i> Contact</a></li>
-            </ul>
-        </div>
-    
-        <div id="no-hamburger">
-            <ul class="ul-nav">
-                <li><a href="#section-hero"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="#section-about"><i class="fa-solid fa-user"></i> About Me</a></li>
-                <li><a href="#section-project"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
-                <li><a href="#section-contact"><i class="fa-regular fa-address-card"></i> Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-</header>
+<?php include "head.html"; ?>
 
 <section id="section-hero">
     <div class="hero-right">
@@ -62,7 +18,7 @@
                 I'm a Belgian web developer based in Seoul, South Korea.
             </p>
             <p class="about-p">
-                My interest in web development started back in the early 2000s when I tried editing custom Tumblr themes. I’m now looking for a junior dev position to finally kick start my career and learn among professionals. In addition to my passion for solving problems and efficiency, I am also interested in knitting, listinging to music and manga.
+                My interest in web development started back in the early 2000s when I tried editing custom Tumblr themes. I’m now looking for a junior dev position to finally kick start my career and learn among professionals. In addition to my passion for solving problems and creating user-friendly web pages, I am also interested in knitting, listinging to music and manga.
             </p>
         </div>
 
@@ -281,6 +237,4 @@
         </a>
     </div>
 </section>
-<footer>©2022 Vorleak. All rights reserved.</footer>
-</body>
-</html>
+<?php include "footer.html"; ?>
