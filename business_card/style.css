@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --title-color: #2B283A;
+}
+
+body {
+    background-color: #23252C;
+    margin: 0;
+    font-family: Inter, sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background-color: #F5F5F5;
+    width: 317px;
+    height: fit-content;
+    border-radius: 10px;
+    margin: 25px auto;
+}
+
+h2 {
+    color: var(--title-color);
+    font-size: 16px;
+    margin: 0;
+}
+
+/* profile picture */
+.profile-pic {
+    width: 317px;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* Info section */
+.info-section{
+    text-align: center;
+}
+
+.name{
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--title-color);
+    line-height: 30px;
+    margin:20px 0 0 0;
+}
+
+.role {
+    color: #F47D27;
+    margin:0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 6px 0 8px 0;
+}
+
+.personal-website, .personal-website:visited, .personal-website:active, .personal-website:hover{
+    color: #4A4E74;
+    font-weight: 400;
+    font-size: 10px;
+    text-decoration: none;
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 13px 9px 11px;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+button {
+    width: 115px;
+    height: 34px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.email-button{
+    color: #1E1F26;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+}
+
+.linkedin-button{
+    color: #FFFFFF;
+    background: #5093E2;
+    border: 1px solid #5093E2;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+}
+
+/* About and Interests section*/
+.about-section, .interests-section{
+        padding: 5px 35px 5px 35px;
+}
+.about-section > p, .interests-section>p{
+        line-height: 150%;
+        font-size: 10px;
+        font-weight: 400;
+        color: #4A4E74;
+}
+
+/* Footer */
+
+footer{
+     background: #D5D4D8;
+border-radius: 0px 0px 10px 10px;
+    text-align: center;
+}
+
+.footer-copyright {
+    padding: 10px 35px 10px 35px;
+    font-size: 0.5rem;
+    color: #918E9B;
+}
