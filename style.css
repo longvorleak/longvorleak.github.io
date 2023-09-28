@@ -1,12 +1,18 @@
 /* === DEFAULT === */
 :root {
-    --dark-color: #062925;
-    --medium-color: #044a42;
+    /* --dark-color: #062925;
+    --dark-accent: #044a42;
     --main-color: #3a9188; 
-    --light-color: #b8e1dd;
-    --text-color: #eef3e6;
-    --button-radius: 25px;
-    --border-radius: 15px;
+    --light-accent: #b8e1dd;
+    --light-color: #eef3e6; */
+    --dark-accent: #7B2934;
+    --dark-color: #B87278;
+    --main-accent: #A53442;
+    --main-color: #D7A0A1; 
+    --light-accent: #AEA7A5;
+    --light-color: #eef3e6; 
+    --button-radius: 50px;
+    --border-radius: 5px;
   }
 
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,700&family=Architects+Daughter&family=Dancing+Script&family=Fuzzy+Bubbles:wght@400;700&display=swap');
@@ -20,8 +26,8 @@ font-family: 'Fuzzy Bubbles', cursive;
 
 html {
     font-family: 'Anonymous Pro', monospace;  
-    background-color: var(--medium-color);
-    color: var(--text-color);
+    background-color: var(--light-color);
+    color: var(--dark-accent);
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
@@ -47,7 +53,7 @@ body {
 h2 {
     font-size: 2em;
     font-weight: 700;
-    border: solid 3px var(--text-color);
+    border: solid 3px var(--main-accent);
     width: fit-content;
     padding: 10px 15px;
 }
@@ -55,8 +61,7 @@ h2 {
 p{
     line-height: 1.5;
 }
-::selec
-tion {
+::selection {
     background-color: var(--main-color);
 }
 
@@ -65,7 +70,7 @@ a {
 }
 
 a:active, a:visited, a:link {
-    color: var(--text-color);
+    color: var(--dark-accent);
 }
 
 a:hover {
@@ -91,13 +96,14 @@ button {
     text-align: center;
     text-transform: capitalize;
     background-color: var(--dark-color);
-    color: var(--text-color);
+    color: var(--light-color);
     font-family: Anonymous Pro, cursive;
     cursor: pointer;
 }
 
 button:hover {
     background-color: var(--main-color);
+    color: var(--main-accent)
 }
 
 #back-button {
@@ -128,7 +134,7 @@ button:hover {
 nav {
     text-transform: uppercase;
     font-weight: bold;
-    background-color: var(--dark-color);
+    background-color: var(--main-color);
     position: absolute;
     top: 0;
     width: 100vw;
@@ -136,11 +142,16 @@ nav {
 }
 
 .ul-nav a:hover {
-    border: solid 2px var(--text-color);
+    border: solid 2px var(--dark-color);
     width: fit-content;
     padding: 10px 15px;
-    color: var(--text-color);
+    background-color: var(--dark-color);
+    border-radius: var(--border-radius);
     box-sizing: border-box;
+}
+
+.ul-nav a {
+    color: var(--light-color);
 }
 
 /* === DEFAULT SECTION === */
@@ -238,7 +249,7 @@ nav {
     width: 40%;
 }
 .name {
-    color: var(--light-color);
+    color: var(--dark-color);
     font-family: 'Dancing Script', cursive;
     font-size: 1.4em;
 } 
@@ -296,36 +307,35 @@ nav {
     padding: 80px 100px;
     box-sizing: border-box;
     background-color: var(--main-color);
-    color: var(--dark-color);
+    color: var(--light-color);
     scroll-snap-align: start;
 }
 
 #email-link {
     text-decoration: underline;
-    color: var(--dark-color);
-    font-weight: bold;
+    color: var(--light-accent)
 }
 
 #email-link:active {
-    color: var(--dark-color);
+    color: var(--dark-accent);
 }
 
 #email-link:hover, .socials .icon:hover {
-    color: var(--text-color);
+    color: var(--dark-accent);
 }
 
 .socials .icon {
-    color: var(--dark-color);
+    color: var(--light-color);
 }
 
 #h2-contact {
-    border-color: var(--dark-color);
+    border-color: var(--light-color);
 }
 
 /* === FOOTER === */
 footer {
-    background-color: var(--dark-color);
-    color: var(--text-color);
+    background-color: var(--dark-accent);
+    color: var(--light-color);
     text-align: center;
     font-size: smaller;
     padding: 30px 0;
