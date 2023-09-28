@@ -313,7 +313,7 @@ nav {
 
 #email-link {
     text-decoration: underline;
-    color: var(--light-accent)
+    color: var(--light-color)
 }
 
 #email-link:active {
