@@ -10,7 +10,7 @@
     --main-accent: #A53442;
     --main-color: #D7A0A1; 
     --light-accent: #AEA7A5;
-    --light-color: #eef3e6; 
+    --light-color: #fcfcfb; 
     --button-radius: 50px;
     --border-radius: 5px;
   }
@@ -27,7 +27,7 @@ font-family: 'Fuzzy Bubbles', cursive;
 html {
     font-family: 'Anonymous Pro', monospace;  
     background-color: var(--light-color);
-    color: var(--dark-accent);
+    color: var(--main-accent);
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
@@ -127,7 +127,7 @@ button:hover {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    padding: 5px 0px;
+    padding: 10px 10x;
     box-sizing: border-box;
 }
 
@@ -139,12 +139,12 @@ nav {
     top: 0;
     width: 100vw;
     z-index: 2;
+    padding: 10px;
 }
 
 .ul-nav a:hover {
-    border: solid 2px var(--dark-color);
     width: fit-content;
-    padding: 10px 15px;
+    padding: 10px 10px;
     background-color: var(--dark-color);
     border-radius: var(--border-radius);
     box-sizing: border-box;
