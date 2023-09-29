@@ -162,6 +162,11 @@ nav {
     scroll-snap-align: start;
 }
 
+#section-about {
+    background-color: var(--main-color);
+    color: var(--light-color);
+}
+
 #section-project {
     padding: 50px 100px 0 100px;
     box-sizing: border-box;
@@ -238,10 +243,11 @@ nav {
 
 .about-text {
     width: 60%;
+    color: var(--light-color)
 }
 
 .about-p {
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 .manga-pic {
@@ -249,7 +255,7 @@ nav {
     width: 40%;
 }
 .name {
-    color: var(--dark-color);
+    color: var(--main-accent);
     font-family: 'Dancing Script', cursive;
     font-size: 1.4em;
 } 
@@ -311,16 +317,16 @@ nav {
     scroll-snap-align: start;
 }
 
-#email-link {
+#link-reverse, #email-reverse {
     text-decoration: underline;
     color: var(--light-color)
 }
 
-#email-link:active {
+#link-reverse:active, #email-reverse:active {
     color: var(--dark-accent);
 }
 
-#email-link:hover, .socials .icon:hover {
+#link-reverse:hover, #email-reverse:hover, .socials .icon:hover {
     color: var(--dark-accent);
 }
 
@@ -328,7 +334,7 @@ nav {
     color: var(--light-color);
 }
 
-#h2-contact {
+.h2-reverse {
     border-color: var(--light-color);
 }
 
@@ -351,6 +357,22 @@ footer {
     font-size: 1.2em;
 }
 
+/* === SKILLS=== */
+
+#skill-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-container {
+    background-color: var(--dark-accent);
+    color: var(--light-color);
+    padding: 5px 25px;
+    margin: 20px;
+    border-radius: var(--border-radius);
+    width: 300px;
+}
 
 /* === MEDIA QUERIES === */
 
