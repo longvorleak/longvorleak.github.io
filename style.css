@@ -122,6 +122,10 @@ button:hover {
     margin-bottom: 50px;
 }
 
+#project-page {
+    background-color: var(--dark-accent);
+}
+
 
 /* === NAVIGATION === */
 .ul-nav {
@@ -171,6 +175,7 @@ nav {
     padding: 50px 100px 0 100px;
     box-sizing: border-box;
     scroll-snap-align: start;
+    background-color: var(--dark-accent);
 }
 
 /* === HERO SECTION === */
@@ -180,6 +185,7 @@ nav {
     box-sizing: border-box;
     scroll-snap-align: start;
     overflow-x: hidden;
+    background-color: var(--main-color);
 } 
 
 #pro-pic {
@@ -268,16 +274,16 @@ nav {
 }
 /* === PROJECTS === */
 
-#section-project{
-    background-color: var(--dark-accent);
-}
-
-.project {
+.project, .project-home {
     display: flex;
     background-color: var(--light-color);
     margin: 20px 0px;
     padding: 20px;
     border-radius: var(--border-radius);
+}
+
+.project-home {
+    width: 50%;
 }
 
 .h3-title {
