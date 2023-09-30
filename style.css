@@ -119,6 +119,7 @@ button:hover {
     text-align: center;
     width: fit-content;
     font-weight: bold;
+    margin-bottom: 50px;
 }
 
 
@@ -156,7 +157,6 @@ nav {
 
 /* === DEFAULT SECTION === */
 #section-about, #section-skills {
-    height: 100vh;
     padding: 80px 100px;
     box-sizing: border-box;
     scroll-snap-align: start;
@@ -267,8 +267,17 @@ nav {
     height: auto;
 }
 /* === PROJECTS === */
+
+#section-project{
+    background-color: var(--dark-accent);
+}
+
 .project {
     display: flex;
+    background-color: var(--light-color);
+    margin: 20px 0px;
+    padding: 20px;
+    border-radius: var(--border-radius);
 }
 
 .h3-title {
@@ -336,6 +345,7 @@ nav {
 
 .h2-reverse {
     border-color: var(--light-color);
+    color: var(--light-color);
 }
 
 /* === FOOTER === */
