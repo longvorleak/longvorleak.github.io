@@ -132,7 +132,6 @@ button:hover {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    padding: 10px 10x;
     box-sizing: border-box;
 }
 
@@ -144,7 +143,6 @@ nav {
     top: 0;
     width: 100vw;
     z-index: 2;
-    padding: 10px;
 }
 
 .ul-nav a:hover {
@@ -288,6 +286,10 @@ nav {
     color: var(--light-color);
 }
 
+.p-text{
+    color: var(--light-color);
+}
+
 .h3-title {
     margin-top: 0;
     text-transform: uppercase;
@@ -361,6 +363,7 @@ footer {
 
 #ham-title {
     font-size: 1.2em;
+    color: var(--light-color);
 }
 
 /* === SKILLS=== */
@@ -382,7 +385,7 @@ footer {
 
 /* === MEDIA QUERIES === */
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 800px) {
     .hero-bubble { 
         top: 12%;
         left: 40%;
@@ -404,10 +407,6 @@ footer {
         padding: 20px 30px;
         height: fit-content;
     }
-
-    /* #section-about {
-        display: inline;
-    } */
 
     .about-containter {
         display: block;
@@ -433,8 +432,120 @@ footer {
     }
 
     #pro-manga-pic {
-        width: 80%;
+        width: 300px;
         margin: 30px auto;
     }
+
+    /* Hamburger menu */
+
+    #no-hamburger {
+		display: none;
+	}
+
+    #hamburger {
+		display: block;
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		z-index: 10;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+    .ul-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ul-nav li {
+        margin-bottom: 15px;
+    }
+
+	#hamburger a {
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	#hamburger input {
+		display: block;
+		width: 40px;
+		height: 32px;
+		position: absolute;
+		top: -5px;
+		left: -5px;
+
+		cursor: pointer;
+
+		opacity: 0; /* hide this */
+		z-index: 20; /* and place it over the hamburger */
+
+		-webkit-touch-callout: none;
+	}
+
+	/* hamburger */
+	#hamburger span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: var(--dark-accent);
+		border-radius: 3px;
+		z-index: 20;
+		transform-origin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+			background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+	}
+
+	#hamburger span:first-child {
+		transform-origin: 0% 0%;
+	}
+
+	#hamburger span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+	}
+
+	/* Transforms hamburger span into a crossmark */
+	#hamburger input:checked ~ .hamburger-line {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: var(--light-color);
+	}
+
+	/* hide the middle one */
+	#hamburger input:checked ~ span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+
+	/* the last one should go the other direction */
+	#hamburger input:checked ~ span:nth-last-child(2) {
+		transform: rotate(-45deg) translate(0, -1px);
+	}
+
+	/* Make this absolute positioned at the top left of the screen */
+	#hamburger-menu {
+		position: absolute;
+		width: 100vw;
+		height: 250px;
+		margin: -100px 0 0 0;
+		padding-top: 40px;
+        padding-bottom: 10px;
+		right: -50px;
+		background: var(--dark-accent);
+		list-style-type: none;
+		-webkit-font-smoothing: antialiased;
+		/* to stop flickering of text in safari */
+
+		transform-origin: 0% 0%;
+		transform: translate(100%, 0);
+
+		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+	}
+
+	/* Slide it in from the left */
+	#hamburger input:checked ~ ul {
+		transform: none;
+	}
 
 }
