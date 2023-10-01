@@ -115,11 +115,11 @@ button:hover {
 }
 
 #project-button  {
-    padding: 20px 50px;
+    padding: 20px 30px;
     text-align: center;
     width: fit-content;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 #project-page {
@@ -411,7 +411,7 @@ footer {
 
     .about-containter {
         display: block;
-        padding: 20px 30px;
+        padding: 10px 0px;
     }
     
     .about-p {
