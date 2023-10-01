@@ -256,11 +256,6 @@ nav {
     font-size: 1em;
 }
 
-.manga-pic {
-    width: 38%;
-    display: block;
-    margin: auto 0px auto 0px;
-}
 
 .name {
     color: var(--main-accent);
@@ -268,11 +263,16 @@ nav {
     font-size: 1.4em;
 } 
 
+.manga-pic {
+    width: 550px;
+    height: auto;
+}
+
 #pro-manga-pic {
     border-radius: 50%;
-    /* width: 380px; */
-    width: 90%;
-    height: auto;
+    width: 80%;
+    display: block;
+    margin: auto;
 }
 /* === PROJECTS === */
 
@@ -428,9 +428,13 @@ footer {
     }
 
     .manga-pic {
-        display: block;
-        margin: 10px auto 0px auto;
+        width: 100%;
+        height: auto;
+    }
+
+    #pro-manga-pic {
         width: 80%;
+        margin: 30px auto;
     }
 
 }
