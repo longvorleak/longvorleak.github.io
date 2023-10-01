@@ -248,18 +248,20 @@ nav {
 }
 
 .about-text {
-    width: 60%;
+    width: 62%;
     color: var(--light-color)
 }
 
 .about-p {
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .manga-pic {
-    text-align: end;
-    width: 40%;
+    width: 38%;
+    display: block;
+    margin: auto 0px auto 30px;
 }
+
 .name {
     color: var(--main-accent);
     font-family: 'Dancing Script', cursive;
@@ -274,16 +276,16 @@ nav {
 }
 /* === PROJECTS === */
 
-.project, .project-home {
-    display: flex;
+.project {
+    display: block;
     background-color: var(--light-color);
-    margin: 20px 0px;
-    padding: 20px;
+    margin: 30px 0px;
+    padding: 30px 30px;
     border-radius: var(--border-radius);
 }
 
-.project-home {
-    width: 50%;
+.p-project {
+    color: var(--light-color);
 }
 
 .h3-title {
@@ -295,30 +297,18 @@ nav {
     font-size: 35px;
 }
 
-.project-text {
-    width: 50%;
-    border-radius: 10px;
-}
-
-.project-image {
+.project-img {
+    /* width: 100%; */
+    border: 1px solid var(--main-color);
+    border-radius: var(--border-radius);
+    display: block;
+    margin: 0px auto 30px auto ;
     width: 40%;
 }
-.project-image:hover {
-    scale: 1.35;
-}
 
-.left {
-    margin: 0 20px 50px 0;
-}
-
-.right {
-    margin: 0 0 50px 20px;
-    text-align: right;
-}
-
-.project-img {
-    width: 100%;
-    border-radius: 15px;
+.project-img:hover {
+    scale: 2;
+    border: none;
 }
 
 /* === CONTACT === */
@@ -384,8 +374,8 @@ footer {
 .skill-container {
     background-color: var(--dark-accent);
     color: var(--light-color);
-    padding: 5px 25px;
-    margin: 20px;
+    padding: 10px 30px;
+    margin: 20px 10px;
     border-radius: var(--border-radius);
     width: 300px;
 }
@@ -436,4 +426,5 @@ footer {
         width: 100%;
         text-align: center;
     }
+
 }
