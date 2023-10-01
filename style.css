@@ -259,7 +259,7 @@ nav {
 .manga-pic {
     width: 38%;
     display: block;
-    margin: auto 0px auto 30px;
+    margin: auto 0px auto 0px;
 }
 
 .name {
@@ -422,9 +422,15 @@ footer {
         font-size: 1.5em;
     }
 
-    .about-text, .manga-pic {
+    .about-text {
         width: 100%;
         text-align: center;
+    }
+
+    .manga-pic {
+        display: block;
+        margin: 10px auto 0px auto;
+        width: 80%;
     }
 
 }
