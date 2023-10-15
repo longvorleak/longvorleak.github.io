@@ -124,34 +124,16 @@ button:hover {
 
 
 /* === NAVIGATION === */
-.ul-nav {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    box-sizing: border-box;
-}
 
-nav {
-    text-transform: uppercase;
+.navbar {
+    /* text-transform: uppercase;
     font-weight: bold;
-    background-color: var(--main-color);
-    position: absolute;
-    top: 0;
+    background-color: var(--main-color); */
+    position: absolute; 
+    /* top: 0;
     width: 100vw;
-    z-index: 2;
-}
-
-.ul-nav a:hover {
-    width: fit-content;
-    padding: 10px 10px;
-    background-color: var(--dark-color);
-    border-radius: var(--border-radius);
-    box-sizing: border-box;
-}
-
-.ul-nav a {
-    color: var(--light-color);
-}
+    z-index: 2; */
+} 
 
 /* === DEFAULT SECTION === */
 #section-about, #section-skills {
@@ -384,11 +366,7 @@ footer {
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
@@ -407,20 +385,15 @@ footer {
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2){
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
+/* Transform all the span of hamburger into a crossmark */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
@@ -428,18 +401,14 @@ footer {
   background: var(--dark-accent);
 }
 
-/*
- * But let's hide the middle one.
- */
+/* But hides the middle one */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
+/* the last one should go the other direction */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
